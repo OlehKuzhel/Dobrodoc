@@ -385,7 +385,7 @@
                         </div>
                      </div>
                      <div class="vacancy-item__buttons">
-                        <a href="#vacancy_1" class="btn btn--detail fancybtn">Детально</a>
+                        <a href="#vacancydetail" data-vacancy="1" class="btn btn--detail fancybtn">Детально</a>
                         <a href="#callback" class="btn btn--send">Відправити заявку</a>
                      </div>
                   </div>
@@ -404,7 +404,7 @@
                         </div>
                      </div>
                      <div class="vacancy-item__buttons">
-                        <a href="#vacancy_1" class="btn btn--detail fancybtn">Детально</a>
+                        <a href="#vacancydetail" data-vacancy="2" class="btn btn--detail fancybtn">Детально</a>
                         <a href="#callback" class="btn btn--send">Відправити заявку</a>
                      </div>
                   </div>
@@ -423,7 +423,7 @@
                         </div>
                      </div>
                      <div class="vacancy-item__buttons">
-                        <a href="#vacancy_1" class="btn btn--detail fancybtn">Детально</a>
+                        <a href="#vacancydetail" data-vacancy="3" class="btn btn--detail fancybtn">Детально</a>
                         <a href="#callback" class="btn btn--send">Відправити заявку</a>
                      </div>
                   </div>
@@ -649,11 +649,70 @@
             </div>
          </div>
       </footer>
+
+      <div id="vacancydetail" style="display:none" class="popup popup-vacancy">
+         <div class="popup-content">
+            <div class="vacancy">
+               <div class="vacancy-content">
+               <h4>Шукаєте роботу на літньо-осінній період?</h4>
+<p>Сезонна робота - це чудовий варіант заробітку для осіб, які не хочуть назавжди покидати рідну країну. Робота зі збору урожаю - один з найпопулярніших варіантів для сезонного працевлаштування. Вам не потрібно витрачати час на додаткове навчання для виконання даної роботи. Ви перебуватимете на свіжому повітрі не зазнаючи впливу шкідливого виробництва, як на заводах чи фабриках. Завдяки зручному розташуванню житла (15-20 хв пішої ходи) у Вас залишається час на відпочинок.</p>
+<h4>Вимоги:</h4>
+<ul>
+   <li>вік 18 - 60 років</li>
+   <li>вміння швидко працювати</li>
+   <li>вмотивованість до роботи</li>
+   <li>уважність</li>
+   <li>відсутність шкідливих звичок вітається</li>
+</ul>
+
+<h4>Умови праці:</h4>
+
+<ul>
+   <li>вік 18 - 60 років</li>
+   <li>вміння швидко працювати</li>
+   <li>вмотивованість до роботи</li>
+   <li>уважність</li>
+   <li>відсутність шкідливих звичок вітається</li>
+</ul>
+<h4>Необхідні документи:</h4>
+<ul>
+   <li>паспорт громадянина України</li>
+   <li>ідентифікаційний код</li>
+   <li>закордонний паспорт</li>
+   <li>уважність</li>
+</ul>
+</div>
+            </div>
+         </div>
+      </div>
+
+      <div id="callback" style="display:none" class="popup popup-callback">
+         <div class="popup-content">
+            <div class="callback">
+               <h3>Оставьте свои данные</h3>
+               <form>
+                  <input type="hidden" name="vacancyname" value="Название вакансии">
+                  <div class="form-row">
+                     <input type="text" name="name" class="field field--text" required="required" placeholder="Введите имя">
+                  </div>
+                  <div class="form-row">
+                     <input type="tel" name="phone" class="field field--text phone" required="required" placeholder="Номер телефона">
+                  </div>
+                  <div class="form-row">
+                     <input type="email" name="email" class="field field--text email" required="required" placeholder="Email">
+                  </div>
+                  <div class="form-submit">
+                     <button type="submit" class="btn btn--submit">Отправить</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
       
       <div id="consultation" style="display:none" class="popup popup-consultation">
          <div class="popup-content">
             <div class="consultation">
-               
+
             </div>
          </div>
       </div>
