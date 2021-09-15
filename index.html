@@ -74,13 +74,21 @@
                </div>
             </div>
          </div>
-         <div class="wrapper">
-            <div class="main">
-               <a href="#" class="link link--nav main--prev"></a>
-               <a href="#" class="link link--nav main--next"></a>
+         <!-- <div class="wrapper"> -->
+            <!-- <div class="main"> -->
+               <a href="#" class="link link--nav main--prev">
+                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M20 0C16.0444 0 12.1776 1.17298 8.8886 3.37061C5.59962 5.56823 3.03617 8.69181 1.52242 12.3463C0.00866566 16.0009 -0.387401 20.0222 0.384303 23.9018C1.15601 27.7814 3.06082 31.3451 5.85787 34.1421C8.65492 36.9392 12.2186 38.844 16.0982 39.6157C19.9778 40.3874 23.9991 39.9913 27.6537 38.4776C31.3082 36.9638 34.4318 34.4004 36.6294 31.1114C38.827 27.8224 40 23.9556 40 20C40 14.6957 37.8929 9.60859 34.1421 5.85786C30.3914 2.10714 25.3043 0 20 0ZM31.4286 21.4286H14.0714L22.0429 29.39L20 31.4286L8.57144 20L20 8.57143L22.0429 10.5614L14.0714 18.5714H31.4286V21.4286Z" fill="#F9F9F9"/>
+                  </svg>
+               </a>
+               <a href="#" class="link link--nav main--next">
+                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M0 20C0 23.9556 1.17298 27.8224 3.37061 31.1114C5.56823 34.4004 8.69181 36.9638 12.3463 38.4776C16.0009 39.9913 20.0222 40.3874 23.9018 39.6157C27.7814 38.844 31.3451 36.9392 34.1421 34.1421C36.9392 31.3451 38.844 27.7814 39.6157 23.9018C40.3874 20.0222 39.9913 16.0009 38.4776 12.3463C36.9638 8.69181 34.4004 5.56823 31.1114 3.37061C27.8224 1.17298 23.9556 0 20 0C14.6957 0 9.60859 2.10714 5.85786 5.85786C2.10714 9.60859 0 14.6957 0 20ZM8.57143 18.5714H25.9286L17.9571 10.5614L20 8.57143L31.4286 20L20 31.4286L17.9571 29.39L25.9286 21.4286H8.57143V18.5714Z" fill="#F9F9F9"/>
+                  </svg>
+               </a>
                <div class="main-bread swiper-pagination"></div>
-            </div>
-         </div>
+            <!-- </div> -->
+         <!-- </div> -->
       </section>
       <section class="section section-plan">
          <div class="wrapper">
@@ -212,7 +220,7 @@
                <h2>медичні послуги</h2>
                <div class="services-tabs">
                   <div class="services-tabs__header">
-                     <a href="#" class="link link--services" data-filter="all">
+                     <a href="#" class="link link--services active" data-filter="all">
                         <span class="text">ВСІ СТРУКТУРНІ ПІДРОЗДІЛИ</span>
                      </a>
                      <a href="#" class="link link--services" data-filter="base">
@@ -228,18 +236,24 @@
                   <div class="services-tabs__items">
                      <div class="services-tabs__item" data-filter="filiya_1">
                         <a href="#" class="link link--photo"><img src="img/n2.png" alt="n2"></a>
-                        <h3><a href="#">КЛІНІКО - ДІАГНОСТИЧНА ЛАБОЛАТОРІЯ</a></h3>
-                        <p>Кардиореабилитация представляет собой совокупность восстанавливающих процедур и диагностических методик</p>
+                        <div class="content">
+                           <h3><a href="#">КЛІНІКО - ДІАГНОСТИЧНА ЛАБОЛАТОРІЯ</a></h3>
+                           <p>Кардиореабилитация представляет собой совокупность восстанавливающих процедур и диагностических методик</p>
+                        </div>
                      </div>
                      <div class="services-tabs__item" data-filter="base">
                         <a href="#" class="link link--photo"><img src="img/n2.png" alt="n2"></a>
-                        <h3><a href="#">КЛІНІКО - ДІАГНОСТИЧНА ЛАБОЛАТОРІЯ</a></h3>
-                        <p>Кардиореабилитация представляет собой совокупность восстанавливающих процедур и диагностических методик</p>
+                        <div class="content">
+                           <h3><a href="#">КЛІНІКО - ДІАГНОСТИЧНА ЛАБОЛАТОРІЯ </a></h3>
+                           <p>Кардиореабилитация представляет собой совокупность восстанавливающих процедур и диагностических методик</p>
+                        </div>
                      </div>
                      <div class="services-tabs__item" data-filter="filiya_2">
                         <a href="#" class="link link--photo"><img src="img/n2.png" alt="n2"></a>
-                        <h3><a href="#">КЛІНІКО - ДІАГНОСТИЧНА ЛАБОЛАТОРІЯ</a></h3>
-                        <p>Кардиореабилитация представляет собой совокупность восстанавливающих процедур и диагностических методик</p>
+                        <div class="content">
+                           <h3><a href="#">КЛІНІКО - ДІАГНОСТИЧНА ЛАБОЛАТОРІЯ</a></h3>
+                           <p>Кардиореабилитация представляет собой совокупность восстанавливающих процедур и диагностических методик</p>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -364,8 +378,8 @@
                         </div>
                      </div>
                      <div class="vacancy-item__buttons">
-                        <a href="#vacancydetail" data-vacancy="1" class="btn btn--detail fancybtn">Детально</a>
-                        <a href="#callback" class="btn btn--send">Відправити заявку</a>
+                        <a href="#" data-popup="#vacancydetail" data-vacancy="1" class="btn btn--detail fancybtn">Детально</a>
+                        <a href="#" data-popup="#callback" class="btn btn--send fancybtn">Відправити заявку</a>
                      </div>
                   </div>
                   <div class="vacancy-item">
@@ -383,8 +397,8 @@
                         </div>
                      </div>
                      <div class="vacancy-item__buttons">
-                        <a href="#vacancydetail" data-vacancy="2" class="btn btn--detail fancybtn">Детально</a>
-                        <a href="#callback" class="btn btn--send">Відправити заявку</a>
+                        <a href="#" data-popup="#vacancydetail" data-vacancy="2" class="btn btn--detail fancybtn">Детально</a>
+                        <a href="#" data-popup="#callback" class="btn btn--send fancybtn">Відправити заявку</a>
                      </div>
                   </div>
                   <div class="vacancy-item">
@@ -402,8 +416,8 @@
                         </div>
                      </div>
                      <div class="vacancy-item__buttons">
-                        <a href="#vacancydetail" data-vacancy="3" class="btn btn--detail fancybtn">Детально</a>
-                        <a href="#callback" class="btn btn--send">Відправити заявку</a>
+                        <a href="#" data-popup="#vacancydetail" data-vacancy="3" class="btn btn--detail fancybtn">Детально</a>
+                        <a href="#" data-popup="#callback" class="btn btn--send fancybtn">Відправити заявку</a>
                      </div>
                   </div>
                </div>
@@ -478,7 +492,7 @@
             </div>
          </div>
       </section>
-      <section class="section section-news">
+      <section class="section section-newslanding">
          <div class="wrapper">
             <div class="news">
                <h2>Наши новости </h2>
@@ -538,47 +552,62 @@
                <div class="gallery-items">
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery">Увеличить</a>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery">Увеличить</a>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery">Увеличить</a>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery">Увеличить</a>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery">Увеличить</a>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery">Увеличить</a>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery">Увеличить</a>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery">Увеличить</a>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery">Увеличить</a>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <img src="img/n2.png" alt="">
+                  </div>
+                  <div class="gallery-item">
+                     <h4>Название фото в две троки максимум</h4>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <img src="img/n2.png" alt="">
+                  </div>
+                  <div class="gallery-item">
+                     <h4>Название фото в две троки максимум</h4>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <img src="img/n2.png" alt="">
+                  </div>
+                  <div class="gallery-item">
+                     <h4>Название фото в две троки максимум</h4>
+                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                </div>

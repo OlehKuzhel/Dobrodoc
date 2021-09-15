@@ -12,57 +12,23 @@ let isMobile = false;
 
 
 
-
-
-const sliderProductThumbs = new Swiper('.product-slider__thumbs', {
-        speed: 800,
-        slidesPerView: 4,
-        spaceBetween: 35,
-        // fadeEffect: { crossFade: true },
-        // effect: 'fade',
-        // centeredSlides: true,
-        slideToClickedSlide: true,
-        // loop: true,
-        // navigation: {
-        //     nextEl: '.product--next',
-        //     prevEl: '.product--prev',
-        // },
-        on: {
-            init: function () {
-                // $all = this.slides.length
-                // $index = this.activeIndex
-                // $numbers = $('.insurance-navigation').find('p')
-                // $activenumb = $numbers.find('.active').text($index + 1)
-                // $allnumb = $numbers.find('.all').text($all)
-            },
-            slideChange: function () {
-                // $index = this.activeIndex
-                // $numbers = $('.insurance-navigation').find('p')
-                // $activenumb = $numbers.find('.active').text($index + 1);
-                
-                // $prevIndex = this.previousIndex;
-                // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
-                //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
-                // });
-            },
-        }
-
-    });
-
-const sliderProduct = new Swiper('.product-slider', {
+const sliderMain = new Swiper('.main-slider', {
         speed: 800,
         slidesPerView: 1,
-        spaceBetween: 35,
+        spaceBetween: 0,
         // fadeEffect: { crossFade: true },
         // effect: 'fade',
-        // loop: true,
-        thumbs: {
-            // inverse: true,
-            swiper: sliderProductThumbs
+        // centeredSlides: true,
+        // slideToClickedSlide: true,
+        loop: true,
+        pagination: {
+            el: '.main-bread',
+            type: 'bullets',
+            clickable: true,
           },
         navigation: {
-            nextEl: '.product--next',
-            prevEl: '.product--prev',
+            nextEl: '.main--next',
+            prevEl: '.main--prev',
         },
         on: {
             init: function () {
@@ -86,80 +52,159 @@ const sliderProduct = new Swiper('.product-slider', {
 
     });
 
-
-
-const sliderRelated = new Swiper('.related-slider', {
-        speed: 800,
-        slidesPerView: 3,
-        spaceBetween: 40,
-        // fadeEffect: { crossFade: true },
-        // effect: 'fade',
-        // centeredSlides: true,
-        // loop: true,
-        navigation: {
-            nextEl: '.related--next',
-            prevEl: '.related--prev',
-        },
-        on: {
-            init: function () {
-                // $all = this.slides.length
-                // $index = this.activeIndex
-                // $numbers = $('.insurance-navigation').find('p')
-                // $activenumb = $numbers.find('.active').text($index + 1)
-                // $allnumb = $numbers.find('.all').text($all)
-            },
-            slideChange: function () {
-                // $index = this.activeIndex
-                // $numbers = $('.insurance-navigation').find('p')
-                // $activenumb = $numbers.find('.active').text($index + 1);
+// const sliderProductThumbs = new Swiper('.product-slider__thumbs', {
+//         speed: 800,
+//         slidesPerView: 4,
+//         spaceBetween: 35,
+//         // fadeEffect: { crossFade: true },
+//         // effect: 'fade',
+//         // centeredSlides: true,
+//         slideToClickedSlide: true,
+//         // loop: true,
+//         // navigation: {
+//         //     nextEl: '.product--next',
+//         //     prevEl: '.product--prev',
+//         // },
+//         on: {
+//             init: function () {
+//                 // $all = this.slides.length
+//                 // $index = this.activeIndex
+//                 // $numbers = $('.insurance-navigation').find('p')
+//                 // $activenumb = $numbers.find('.active').text($index + 1)
+//                 // $allnumb = $numbers.find('.all').text($all)
+//             },
+//             slideChange: function () {
+//                 // $index = this.activeIndex
+//                 // $numbers = $('.insurance-navigation').find('p')
+//                 // $activenumb = $numbers.find('.active').text($index + 1);
                 
-                // $prevIndex = this.previousIndex;
-                // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
-                //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
-                // });
-            },
-        }
+//                 // $prevIndex = this.previousIndex;
+//                 // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
+//                 //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
+//                 // });
+//             },
+//         }
 
-    });
+//     });
 
-const sliderRelatedNews = new Swiper('.newsrelated-slider', {
-        speed: 800,
-        slidesPerView: 4,
-        spaceBetween: 50,
-        // fadeEffect: { crossFade: true },
-        // effect: 'fade',
-        // centeredSlides: true,
-        // loop: true,
-        navigation: {
-            nextEl: '.newsrelated--next',
-            prevEl: '.newsrelated--prev',
-        },
-        on: {
-            init: function () {
-                // $all = this.slides.length
-                // $index = this.activeIndex
-                // $numbers = $('.insurance-navigation').find('p')
-                // $activenumb = $numbers.find('.active').text($index + 1)
-                // $allnumb = $numbers.find('.all').text($all)
-            },
-            slideChange: function () {
-                // $index = this.activeIndex
-                // $numbers = $('.insurance-navigation').find('p')
-                // $activenumb = $numbers.find('.active').text($index + 1);
+// const sliderProduct = new Swiper('.product-slider', {
+//         speed: 800,
+//         slidesPerView: 1,
+//         spaceBetween: 35,
+//         // fadeEffect: { crossFade: true },
+//         // effect: 'fade',
+//         // loop: true,
+//         thumbs: {
+//             // inverse: true,
+//             swiper: sliderProductThumbs
+//           },
+//         navigation: {
+//             nextEl: '.product--next',
+//             prevEl: '.product--prev',
+//         },
+//         on: {
+//             init: function () {
+//                 // $all = this.slides.length
+//                 // $index = this.activeIndex
+//                 // $numbers = $('.insurance-navigation').find('p')
+//                 // $activenumb = $numbers.find('.active').text($index + 1)
+//                 // $allnumb = $numbers.find('.all').text($all)
+//             },
+//             slideChange: function () {
+//                 // $index = this.activeIndex
+//                 // $numbers = $('.insurance-navigation').find('p')
+//                 // $activenumb = $numbers.find('.active').text($index + 1);
                 
-                // $prevIndex = this.previousIndex;
-                // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
-                //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
-                // });
-            },
-        }
+//                 // $prevIndex = this.previousIndex;
+//                 // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
+//                 //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
+//                 // });
+//             },
+//         }
 
-    });
+//     });
+
+
+
+// const sliderRelated = new Swiper('.related-slider', {
+//         speed: 800,
+//         slidesPerView: 3,
+//         spaceBetween: 40,
+//         // fadeEffect: { crossFade: true },
+//         // effect: 'fade',
+//         // centeredSlides: true,
+//         // loop: true,
+//         navigation: {
+//             nextEl: '.related--next',
+//             prevEl: '.related--prev',
+//         },
+//         on: {
+//             init: function () {
+//                 // $all = this.slides.length
+//                 // $index = this.activeIndex
+//                 // $numbers = $('.insurance-navigation').find('p')
+//                 // $activenumb = $numbers.find('.active').text($index + 1)
+//                 // $allnumb = $numbers.find('.all').text($all)
+//             },
+//             slideChange: function () {
+//                 // $index = this.activeIndex
+//                 // $numbers = $('.insurance-navigation').find('p')
+//                 // $activenumb = $numbers.find('.active').text($index + 1);
+                
+//                 // $prevIndex = this.previousIndex;
+//                 // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
+//                 //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
+//                 // });
+//             },
+//         }
+
+//     });
+
+// const sliderRelatedNews = new Swiper('.newsrelated-slider', {
+//         speed: 800,
+//         slidesPerView: 4,
+//         spaceBetween: 50,
+//         // fadeEffect: { crossFade: true },
+//         // effect: 'fade',
+//         // centeredSlides: true,
+//         // loop: true,
+//         navigation: {
+//             nextEl: '.newsrelated--next',
+//             prevEl: '.newsrelated--prev',
+//         },
+//         on: {
+//             init: function () {
+//                 // $all = this.slides.length
+//                 // $index = this.activeIndex
+//                 // $numbers = $('.insurance-navigation').find('p')
+//                 // $activenumb = $numbers.find('.active').text($index + 1)
+//                 // $allnumb = $numbers.find('.all').text($all)
+//             },
+//             slideChange: function () {
+//                 // $index = this.activeIndex
+//                 // $numbers = $('.insurance-navigation').find('p')
+//                 // $activenumb = $numbers.find('.active').text($index + 1);
+                
+//                 // $prevIndex = this.previousIndex;
+//                 // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
+//                 //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
+//                 // });
+//             },
+//         }
+
+//     });
 
 // sliderProduct.controller.control = sliderProductThumbs;
 // sliderProductThumbs.controller.control = sliderProduct;
 
 
+
+$('.link--totop').on('click', function(event){
+    event.preventDefault()
+    $('body, html').animate({
+        scrollTop: 0
+    }, 1500);
+});
 
    
 
