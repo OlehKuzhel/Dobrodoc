@@ -216,6 +216,23 @@ $('.link--totop').on('click', function(event){
 
             }
 
+            if (popup == '#vacancydetail') {
+                $.ajax({
+                    type: "GET",
+                    url: thisBtnUrl,
+                    success: function(data) {
+                        
+                        $(popup).find('.vacancy-content').empty().append(data)
+                    },
+                    error: function(data) {
+                      
+                    }
+                });
+            }
+            if (popup == '#callback') {
+                $(popup).find('input[name="vacancy_id"]').val(vacancy_id)
+            }
+
         },
         afterShow: function(instance, current) {
         },
@@ -231,7 +248,9 @@ $('.link--totop').on('click', function(event){
     }
 
 $('body').on('click', '.fancybtn', function(event) {
-        popup = $(this).data('popup')
+        popup = $(this).data('popup');
+        thisBtnUrl = $(this).attr('data-url')
+        vacancy_id = $(this).attr('data-vacancy')
         // popup = '#callback';
         $.fancybox.open({
             src: popup,
@@ -258,5 +277,85 @@ $('body').on('click', '.fancybtn', function(event) {
             }
         });
     
+
+    $('body').on('click', '.reviews .link--action', function(event) {
+        event.preventDefault();
+        let thisBtn = $(this);
+        let urlAllReviews = thisBtn.attr('data-url');
+        $.ajax({
+            type: "GET",
+            url: urlAllReviews,
+            success: function(data) {
+                thisBtn.remove()
+                $('.reviews-items').append(data)
+            },
+            error: function(data) {
+              
+            }
+        });
+    });
+
+    $('body').on('click', '.gallery .link--showmore', function(event) {
+        event.preventDefault();
+        let thisBtn = $(this);
+        let urlAllGallery = thisBtn.attr('data-url');
+        $.ajax({
+            type: "GET",
+            url: urlAllGallery,
+            success: function(data) {
+                thisBtn.remove()
+                $('.gallery-items').append(data)
+            },
+            error: function(data) {
+              
+            }
+        });
+    });
+
+
+    $("body").on("click",".scroll-btn", function (event) {
+        event.preventDefault(); //опустошим стандартную обработку
+        var id  = $(this).attr('href'), //заберем айдишник блока с параметром URL
+            top = $(id).offset().top; //определим высоту от начала страницы до якоря
+        $('body,html').animate({scrollTop: top}, 1000); //сделаем прокрутку за 1 с
+    });
+
+    $('body').on('click', '.link--plan:not(.active)', function(event) {
+        event.preventDefault();
+
+        $parent = $(this).parents('.plan-tabs__header');
+        $newTab = $(this)
+        $newTabIndex = $newTab.attr('data-tab')
+        $oldTab = $parent.find('.link--plan.active');
+        $oldTabIndex = $oldTab.attr('data-tab');
+
+        $newTab.addClass('active').siblings().removeClass('active')
+
+        $('.plan-tabs__tab[data-tab='+$oldTabIndex+']').fadeOut(400, function() {
+            $('.plan-tabs__tab[data-tab='+$newTabIndex+']').fadeIn(400)
+        });
+    });
+
+    $('body').on('click', '.link--services:not(.active)', function(event) {
+        event.preventDefault();
+        $newFilter = $(this)
+        $newFilterId = $(this).attr('data-filter')
+        $newFilter.addClass('active').siblings().removeClass('active');
+
+        $showedItems = $('.services-tabs__items').find('.services-tabs__item')
+        if ($newFilterId != 'all') {
+          $.each($showedItems, function(index, el) {
+            if ($(el).attr('data-filter').indexOf($newFilterId) > -1) {
+                $(el).fadeIn('fast')
+            } else {
+                $(el).hide()
+            }
+            });  
+        } else {
+            $.each($showedItems, function(index, el) {
+                $(el).fadeIn('fast')
+            });  
+        }
+    });
 
 });
