@@ -16,8 +16,11 @@ const sliderMain = new Swiper('.main-slider', {
         speed: 800,
         slidesPerView: 1,
         spaceBetween: 0,
-        // fadeEffect: { crossFade: true },
-        // effect: 'fade',
+        fadeEffect: { crossFade: true },
+        effect: 'fade',
+        autoplay: {
+           delay: 10000,
+         },
         // centeredSlides: true,
         // slideToClickedSlide: true,
         loop: true,
@@ -211,7 +214,7 @@ $('.link--totop').on('click', function(event){
  const opnsFancy = {
         touch: false,
         baseClass: "modal",
-        beforeLoad: function(instance, slide) {
+        beforeShow: function(instance, slide) {
             if (isMobile == false) {} else {
 
             }
@@ -229,6 +232,35 @@ $('.link--totop').on('click', function(event){
                     }
                 });
             }
+
+            if (popup == '#districtdetail') {
+                $.ajax({
+                    type: "GET",
+                    url: thisBtnUrl,
+                    success: function(data) {
+                        
+                        $(popup).find('.district-content').empty().append(data)
+                    },
+                    error: function(data) {
+                      
+                    }
+                });
+            }
+
+            if (popup == '#consultation') {
+                $.ajax({
+                    type: "GET",
+                    url: thisBtnUrl,
+                    success: function(data) {
+                        
+                        $(popup).find('.consultation-content').empty().append(data)
+                    },
+                    error: function(data) {
+                      
+                    }
+                });
+            }
+
             if (popup == '#callback') {
                 $(popup).find('input[name="vacancy_id"]').val(vacancy_id)
             }
@@ -239,6 +271,7 @@ $('.link--totop').on('click', function(event){
         afterLoad: function(instance, current) {
         },
         afterClose: function(instance, slide) {
+
         },
         hideScrollbar: true,
         btnTpl: {
@@ -315,9 +348,9 @@ $('body').on('click', '.fancybtn', function(event) {
 
     $("body").on("click",".scroll-btn", function (event) {
         event.preventDefault(); //опустошим стандартную обработку
-        var id  = $(this).attr('href'), //заберем айдишник блока с параметром URL
-            top = $(id).offset().top; //определим высоту от начала страницы до якоря
-        $('body,html').animate({scrollTop: top}, 1000); //сделаем прокрутку за 1 с
+        var id  = new URL($(this).attr('href')).hash,
+            top = $(id).offset().top - 95;
+        $('body,html').animate({scrollTop: top}, 1000);
     });
 
     $('body').on('click', '.link--plan:not(.active)', function(event) {
@@ -356,6 +389,22 @@ $('body').on('click', '.fancybtn', function(event) {
                 $(el).fadeIn('fast')
             });  
         }
+    });
+
+    $('body').on('click', '.link--consultation:not(.active)', function(event) {
+        event.preventDefault();
+
+        $parent = $(this).parents('.consultation-content__header');
+        $newTab = $(this)
+        $newTabIndex = $newTab.attr('data-tab')
+        $oldTab = $parent.find('.link--consultation.active');
+        $oldTabIndex = $oldTab.attr('data-tab');
+
+        $newTab.addClass('active').siblings().removeClass('active')
+
+        $('body').find('.consultation-content__tabs .tab[data-tab='+$oldTabIndex+']').fadeOut(400, function() {
+            $('body').find('.consultation-content__tabs .tab[data-tab='+$newTabIndex+']').fadeIn(400)
+        });
     });
 
 });

@@ -31,7 +31,7 @@
                      <li><a href="#" class="link link--menu">Прайс</a></li>
                      <li><a href="#" class="link link--menu">Публичная информация</a></li>
                      <li><a href="#" class="link link--menu">Для посетитетелей</a></li>
-                     <li><a href="#" class="link link--menu">Вакансии</a></li>
+                     <li><a href="#vacancy" class="link link--menu scroll-btn">Вакансии</a></li>
                      <li><a href="#" class="link link--menu">Отзывы</a></li>
                      <li><a href="#" class="link link--menu">Новости</a></li>
                      <li><a href="#" class="link link--menu">Галерея</a></li>
@@ -48,7 +48,7 @@
                         <a href="#" class="link link--language">ENG</a>
                      </div>
                   </div>
-                  <a href="#" class="link link--action fancybtn">
+                  <a href="#" data-popup="#doctorcallback" class="link link--action fancybtn">
                      Запись к врачу
                   </a>
                </div>
@@ -103,7 +103,7 @@
                   <div class="plan-tabs__header">
                      <a href="#" class="link link--plan active" data-tab="1">
                         <span class="text">ФІЛІЯ 1</span>
-                        <span class="icon fancybtn" data-popup="#info_1">
+                        <span class="icon fancybtn" data-popup="#districtdetail" data-url="url_here">
                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M8 16C10.1217 16 12.1566 15.1571 13.6569 13.6569C15.1571 12.1566 16 10.1217 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 0 8 0C5.87827 0 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 0 5.87827 0 8C0 10.1217 0.842855 12.1566 2.34315 13.6569C3.84344 15.1571 5.87827 16 8 16ZM8.93 6.588L7.93 11.293C7.86 11.633 7.959 11.826 8.234 11.826C8.428 11.826 8.721 11.756 8.92 11.58L8.832 11.996C8.545 12.342 7.912 12.594 7.367 12.594C6.664 12.594 6.365 12.172 6.559 11.275L7.297 7.807C7.361 7.514 7.303 7.408 7.01 7.337L6.559 7.256L6.641 6.875L8.931 6.588H8.93ZM8 5.5C7.73478 5.5 7.48043 5.39464 7.29289 5.20711C7.10536 5.01957 7 4.76522 7 4.5C7 4.23478 7.10536 3.98043 7.29289 3.79289C7.48043 3.60536 7.73478 3.5 8 3.5C8.26522 3.5 8.51957 3.60536 8.70711 3.79289C8.89464 3.98043 9 4.23478 9 4.5C9 4.76522 8.89464 5.01957 8.70711 5.20711C8.51957 5.39464 8.26522 5.5 8 5.5Z" fill="#F9F9F9"/>
                            </svg>
@@ -111,7 +111,7 @@
                      </a>
                      <a href="#" class="link link--plan" data-tab="2">
                         <span class="text">ФІЛІЯ 2</span>
-                        <span class="icon fancybtn" data-popup="#info_2">
+                        <span class="icon fancybtn" data-popup="#districtdetail" data-url="url_here">
                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M8 16C10.1217 16 12.1566 15.1571 13.6569 13.6569C15.1571 12.1566 16 10.1217 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 0 8 0C5.87827 0 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 0 5.87827 0 8C0 10.1217 0.842855 12.1566 2.34315 13.6569C3.84344 15.1571 5.87827 16 8 16ZM8.93 6.588L7.93 11.293C7.86 11.633 7.959 11.826 8.234 11.826C8.428 11.826 8.721 11.756 8.92 11.58L8.832 11.996C8.545 12.342 7.912 12.594 7.367 12.594C6.664 12.594 6.365 12.172 6.559 11.275L7.297 7.807C7.361 7.514 7.303 7.408 7.01 7.337L6.559 7.256L6.641 6.875L8.931 6.588H8.93ZM8 5.5C7.73478 5.5 7.48043 5.39464 7.29289 5.20711C7.10536 5.01957 7 4.76522 7 4.5C7 4.23478 7.10536 3.98043 7.29289 3.79289C7.48043 3.60536 7.73478 3.5 8 3.5C8.26522 3.5 8.51957 3.60536 8.70711 3.79289C8.89464 3.98043 9 4.23478 9 4.5C9 4.76522 8.89464 5.01957 8.70711 5.20711C8.51957 5.39464 8.26522 5.5 8 5.5Z" fill="#F9F9F9"/>
                            </svg>
@@ -241,187 +241,187 @@
                   </div>
                   <div class="services-tabs__items">
                      <div class="services-tabs__item" data-filter="filiya_1, filiya_2, filiya_3">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/fgerge5.png" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ЖІНОЧА КОНСУЛЬТАЦІЯ</a></h3>
+                                        <h3>ЖІНОЧА КОНСУЛЬТАЦІЯ</h3>
                                         <p>Кардіореабілітаціі являє собою сукупність відновлювальних процедур і діагностичних методик</p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_1, filiya_2, filiya_3">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/423423.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">КЛІНІКО - ДІАГНОСТИЧНА ЛАБОРАТОРІЯ</a></h3>
+                                        <h3>КЛІНІКО - ДІАГНОСТИЧНА ЛАБОРАТОРІЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_1, filiya_2">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/bk5000-neuro-situation_tif.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ХІРУРГІЯ</a></h3>
+                                        <h3>ХІРУРГІЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_1">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/BK_Medical_Neurosurgery_Hero-scaled.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ХІРУРГІЧНЕ ВІДДІЛЕННЯ МАЛОІНВАЗИВНИХ ТЕХНОЛОГІЙ</a></h3>
+                                        <h3>ХІРУРГІЧНЕ ВІДДІЛЕННЯ МАЛОІНВАЗИВНИХ ТЕХНОЛОГІЙ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/st14.10.2014.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">СТОМАТОЛОГІЯ</a></h3>
+                                        <h3>СТОМАТОЛОГІЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_1, filiya_2, filiya_3">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/stomatologic_orto.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ОРТОПЕДИЧНА СТОМАТОЛОГІЯ</a></h3>
+                                        <h3>ОРТОПЕДИЧНА СТОМАТОЛОГІЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_3">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/stomat_05-c7be8cdd2d.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ПУНКТ НЕВІДКЛАДНОЇ СТОМАТОЛОГІЧНОЇ ДОПОМОГИ</a></h3>
+                                        <h3>ПУНКТ НЕВІДКЛАДНОЇ СТОМАТОЛОГІЧНОЇ ДОПОМОГИ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_6">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/BAK.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">БАКТЕРІОЛОГІЧНА ЛАБОРАТОРІЯ</a></h3>
+                                        <h3>БАКТЕРІОЛОГІЧНА ЛАБОРАТОРІЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_1, filiya_3">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/20190102145831442.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ДІАГНОСТИЧНЕ ВІДДІЛЕННЯ</a></h3>
+                                        <h3>ДІАГНОСТИЧНЕ ВІДДІЛЕННЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_1, filiya_2, filiya_3, filiya_5">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/3kbrSE5WMBwnc047acL8.r575x340.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ТЕРАПЕВТИЧНЕ ВІДДІЛЕННЯ</a></h3>
+                                        <h3>ТЕРАПЕВТИЧНЕ ВІДДІЛЕННЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_2">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/53f846050c4d2_53f846050c50f.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ПЕДІАТРИЧНЕ ВІДДІЛЕННЯ</a></h3>
+                                        <h3>ПЕДІАТРИЧНЕ ВІДДІЛЕННЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_6">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/_dsc3830 96.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ВІДДІЛЕННЯ РЕНТГЕНОЛОГІЧНОЇ ТА ФУНКЦІОНАЛЬНОЇ ДІАГНОСТИКИ</a></h3>
+                                        <h3>ВІДДІЛЕННЯ РЕНТГЕНОЛОГІЧНОЇ ТА ФУНКЦІОНАЛЬНОЇ ДІАГНОСТИКИ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_3">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/anatomy-3003099_1920.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">РЕНГЕНОЛОГІЧНЕ ВІДДІЛЕННЯ</a></h3>
+                                        <h3>РЕНГЕНОЛОГІЧНЕ ВІДДІЛЕННЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/unnamed.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ТРАВМАТОЛОГІЧНИЙ ПУНКТ</a></h3>
+                                        <h3>ТРАВМАТОЛОГІЧНИЙ ПУНКТ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/pic_524.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ФІЗІОТЕРАПЕВТИЧНЕ ВІДДІЛЕННЯ</a></h3>
+                                        <h3>ФІЗІОТЕРАПЕВТИЧНЕ ВІДДІЛЕННЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_1">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/unnamed(1).jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ВІДДІЛЕННЯ ВІДНОВНОГО ЛІКУВАННЯ</a></h3>
+                                        <h3>ВІДДІЛЕННЯ ВІДНОВНОГО ЛІКУВАННЯ</h3>
                                         <p></p>
                                     </div>
                                 </div>
                             
                                                     
                                 <div class="services-tabs__item" data-filter="filiya_1">
-                                    <a href="#" class="link link--photo">
+                                    <a href="#" data-popup="#consultation" class="link link--photo fancybtn" data-url="url_here">
                                         <img src="http://kdcgolos.com.ua/public/storage/photos/1/services/photo231312.jpg" alt="n2">
                                     </a>
                                     <div class="content">
-                                        <h3><a href="#">ВІДДІЛЕННЯ ПРОФІЛАКТИКИ</a></h3>
+                                        <h3>ВІДДІЛЕННЯ ПРОФІЛАКТИКИ</h3>
                                         <p></p>
                                     </div>
                                 </div>
@@ -528,7 +528,7 @@
             </div>
          </div>
       </section>
-      <section class="section section-vacancy">
+      <section class="section section-vacancy" id="vacancy">
          <div class="wrapper">
             <div class="vacancy">
                <h2>Вакансії</h2>
@@ -722,62 +722,62 @@
                <div class="gallery-items">
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                   <div class="gallery-item">
                      <h4>Название фото в две троки максимум</h4>
-                     <a href="img/n2.png" class="link link--big" data-fancybox="gallery"><span>Увеличить</span></a>
+                     <a href="img/n2.png" class="link link--big" data-caption="Название фото" data-fancybox="gallery"><span>Увеличить</span></a>
                      <img src="img/n2.png" alt="">
                   </div>
                </div>
@@ -876,6 +876,65 @@
          </div>
       </div>
 
+
+      <div id="districtdetail" style="display:none" class="popup popup-district">
+         <div class="popup-content">
+            <div class="district">
+               <div class="district-content">
+                  <h3>ІНФОРМАЦІЯ ПРО ФІЛІЮ №1</h3>
+               <p><strong>Філія №1 КНП «Консультативно-діагностичний центр»</strong> Деснянського району м. Києва надає професійну, висококваліфіковану консультативно-діагностичну медичну
+                                 допомогу дорослому населенню в амбулаторних умовах відповідно до клінічних протоколів затверджених МОЗ України.</p>
+                                 <p><strong>Відділення:</strong> хірургічне відділення, терапевтичне відділення,
+                                 рентгенологічне відділення, стоматологічне та ортопедичне відділення, фізіотерапевтичне відділення, клініко-діагностична лабораторія, жіноча консультація.</p>
+                                 <p><strong>Завідувач філії №1</strong><br>
+                                 Бех Ігор Володимирович<br>
+                                 телефон <a href="tel:5329247">532-92-47</a></p>
+               <div class="district-doctor">
+                  <div class="district-doctor__image">
+                     <img src="img/n1.png" alt="">
+                  </div>
+                  <div class="district-doctor__info">
+                     <p><strong>Адміністрація</strong></p>
+                                       <p>Директор КНП «КДЦ» Деснянського району м. Києва<br>
+                                       Лимар Юрій Вікторович<br>
+                                       телефон <a href="tel:5329247">532-92-47</a></p>
+                                       <p>Заступник директора з медичної частини<br>
+                                       Сіротінкіна Катерина Геннадіївна<br>
+                                       телефон <a href="tel:5329247">532-92-47</a></p>
+                                       <p>Заступник директора по обслуговуванню дитячого населення<br>
+                                       Сацик Неля Богданівна<br>
+                                       телефон <a href="tel:5320090">532-00-90</a></p>      
+                  </div>
+               </div>
+            </div>
+            </div>
+         </div>
+      </div>
+
+
+      <div id="doctorcallback" style="display:none" class="popup popup-callback">
+         <div class="popup-content">
+            <div class="callback">
+               <h3>Оставьте свои данные</h3>
+               <form>
+                  <input type="hidden" name="frId" value="Запись к врачу">
+                  <div class="form-row">
+                     <input type="text" name="name" class="field field--text" required="required" placeholder="Введите имя">
+                  </div>
+                  <div class="form-row">
+                     <input type="tel" name="phone" class="field field--text phone" required="required" placeholder="Номер телефона">
+                  </div>
+                  <div class="form-row">
+                     <input type="email" name="email" class="field field--text email" required="required" placeholder="Email">
+                  </div>
+                  <div class="form-submit">
+                     <button type="submit" class="btn btn--submit">Отправить</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
       <div id="callback" style="display:none" class="popup popup-callback">
          <div class="popup-content">
             <div class="callback">
@@ -902,7 +961,122 @@
       <div id="consultation" style="display:none" class="popup popup-consultation">
          <div class="popup-content">
             <div class="consultation">
-
+               <div class="consultation-content">
+                  <div class="consultation-content__header">
+                     <a href="#" class="link link--consultation active" data-tab="filiya_1">
+                        <span class="text">Головний центр</span>
+                     </a>
+                     <a href="#" class="link link--consultation" data-tab="filiya_2">
+                        <span class="text">Філія №1</span>
+                     </a>
+                  </div>
+                  <div class="consultation-content__tabs">
+                     <div class="tab active" data-tab="filiya_1">
+                        <div class="tab-contacts">
+                           <p><strong>Адреса:</strong> вул Закревського, 81/1</p>
+                           <p><strong>Телефон:</strong> <a href="tel:+380445302639">+38(044)530 26 39</a></p>
+                           <p><strong>Графік:</strong> понеделок - п'ятниця з 8.30 до 20.00, субота 8:30 - 14:00</p>
+                        </div>
+                        <div class="tab-images">
+                           <a href="img/n1.png" data-fancybox="consultationgallery" class="link link--tab">
+                              <img src="img/n1.png" alt="">
+                           </a>
+                           <a href="img/n1.png" data-fancybox="consultationgallery" class="link link--tab">
+                              <img src="img/n2.png" alt="">
+                           </a>
+                           <a href="img/n1.png" data-fancybox="consultationgallery" class="link link--tab">
+                              <img src="img/n1.png" alt="">
+                           </a>
+                           <a href="img/n1.png" data-fancybox="consultationgallery" class="link link--tab">
+                              <img src="img/n2.png" alt="">
+                           </a>
+                        </div>
+                        <div class="tab-content">
+                        <h3>У відділенні працюють лікарі-ортодонти , які проводять:</h3>
+                        <ul>
+                           <li>
+                              первинне обстеження хворих( включає запис анамнезу, фізичних обстежень, запланованої програми лікування);
+                           </li>
+                           <li>
+                              Консультація хворого;
+                           </li>
+                           <li>
+                              первинне обстеження хворих( включає запис анамнезу, фізичних обстежень, запланованої програми лікування);
+                           </li>
+                           <li>
+                              Консультація хворого;
+                           </li>
+                        </ul>
+                        <p>
+                              Відділення ортопедичної стоматології складається з п’яти лікувальних кабінетів та з власної зубо- техничної лабораторії. Відділення оснащено сучасним обладнанням та матеріалами, яки дають можливість виготовляти зубні протези за новітніми технологіями.
+</p>
+                        <h3>Спеціалісти відділення:</h3>
+                        <ol>
+                           <li>
+                              лікарі-стамотологи ортопеди;
+                           </li>
+                           <li>
+                              техніки зубні.
+                           </li>
+                        </ol>
+<p>
+Співробітники відділення постійно проводять підвищення свого професійного рівня, постійно беруть участь у вітчизняних та міжнародних наукових конференціях та симпозіумах, в практичних семінарах.
+</p>
+<p>
+При проведенні лікування велику увагу лікарі відділення приділяють не тільки відновленню функції зубо-щелепної системи, а і відновленню естетики. Використовуються сучасні протоколи лікування , розроботані за міжнародними стандартами.
+</p>
+<p>
+При лікуванні використовують незнімне зубне протезування (вкладки, коронки, мостоподібни протези) та зніме протезування ( пластинчаті протези, бюгельни протези) з використанням суцільнолитих, металокерамічних та безметалевих технологій.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="tab" data-tab="filiya_2">
+                        <div class="tab-contacts">
+                           <p><strong>Адреса:</strong> вул Закревського, 81/1</p>
+                           <p><strong>Телефон:</strong> <a href="tel:+380445302639">+38(044)530 26 39</a></p>
+                           <p><strong>Графік:</strong> понеделок - п'ятниця з 8.30 до 20.00, субота 8:30 - 14:00</p>
+                        </div>
+                        <div class="tab-content">
+                        <h3>У відділенні працюють лікарі-ортодонти , які проводять:</h3>
+                        <ul>
+                           <li>
+                              первинне обстеження хворих( включає запис анамнезу, фізичних обстежень, запланованої програми лікування);
+                           </li>
+                           <li>
+                              Консультація хворого;
+                           </li>
+                           <li>
+                              первинне обстеження хворих( включає запис анамнезу, фізичних обстежень, запланованої програми лікування);
+                           </li>
+                           <li>
+                              Консультація хворого;
+                           </li>
+                        </ul>
+                        <p>
+                              Відділення ортопедичної стоматології складається з п’яти лікувальних кабінетів та з власної зубо- техничної лабораторії. Відділення оснащено сучасним обладнанням та матеріалами, яки дають можливість виготовляти зубні протези за новітніми технологіями.
+</p>
+                        <h3>Спеціалісти відділення:</h3>
+                        <ol>
+                           <li>
+                              лікарі-стамотологи ортопеди;
+                           </li>
+                           <li>
+                              техніки зубні.
+                           </li>
+                        </ol>
+<p>
+Співробітники відділення постійно проводять підвищення свого професійного рівня, постійно беруть участь у вітчизняних та міжнародних наукових конференціях та симпозіумах, в практичних семінарах.
+</p>
+<p>
+При проведенні лікування велику увагу лікарі відділення приділяють не тільки відновленню функції зубо-щелепної системи, а і відновленню естетики. Використовуються сучасні протоколи лікування , розроботані за міжнародними стандартами.
+</p>
+<p>
+При лікуванні використовують незнімне зубне протезування (вкладки, коронки, мостоподібни протези) та зніме протезування ( пластинчаті протези, бюгельни протези) з використанням суцільнолитих, металокерамічних та безметалевих технологій.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
