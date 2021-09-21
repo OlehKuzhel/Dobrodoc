@@ -220,11 +220,12 @@ $('.link--totop').on('click', function(event){
             }
 
             if (popup == '#vacancydetail') {
+                $(popup).find('.popup-content').addClass('loader')
                 $.ajax({
                     type: "GET",
                     url: thisBtnUrl,
                     success: function(data) {
-                        
+                        $(popup).find('.popup-content').removeClass('loader')
                         $(popup).find('.vacancy-content').empty().append(data)
                     },
                     error: function(data) {
@@ -234,12 +235,14 @@ $('.link--totop').on('click', function(event){
             }
 
             if (popup == '#districtdetail') {
+                $(popup).find('.popup-content').addClass('loader')
                 $.ajax({
                     type: "GET",
                     url: thisBtnUrl,
                     success: function(data) {
-                        
-                        $(popup).find('.district-content').empty().append(data)
+                        $(popup).find('.popup-content').removeClass('loader')
+                        $(popup).find('.district').empty().append(data)
+
                     },
                     error: function(data) {
                       
@@ -248,11 +251,12 @@ $('.link--totop').on('click', function(event){
             }
 
             if (popup == '#consultation') {
+                $(popup).find('.popup-content').addClass('loader')
                 $.ajax({
                     type: "GET",
                     url: thisBtnUrl,
                     success: function(data) {
-                        
+                        $(popup).find('.popup-content').removeClass('loader')
                         $(popup).find('.consultation-content').empty().append(data)
                     },
                     error: function(data) {
@@ -271,7 +275,15 @@ $('.link--totop').on('click', function(event){
         afterLoad: function(instance, current) {
         },
         afterClose: function(instance, slide) {
-
+            if (popup == '#vacancydetail') {
+                $(popup).find('.vacancy-content').empty()
+            }
+            if (popup == '#districtdetail') {
+                $(popup).find('.district').empty()
+            }
+            if (popup == '#consultation') {
+                $(popup).find('.consultation-content').empty()
+            }
         },
         hideScrollbar: true,
         btnTpl: {
