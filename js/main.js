@@ -1,9 +1,3 @@
-// WebFont.load({
-//     google: {
-//         families: ['Montserrat:400,500,600,700:cyrillic']
-//     }
-// });
-
 $(document).ready(function($) {
 
 
@@ -21,8 +15,6 @@ const sliderMain = new Swiper('.main-slider', {
         autoplay: {
            delay: 10000,
          },
-        // centeredSlides: true,
-        // slideToClickedSlide: true,
         loop: true,
         pagination: {
             el: '.main-bread',
@@ -33,172 +25,7 @@ const sliderMain = new Swiper('.main-slider', {
             nextEl: '.main--next',
             prevEl: '.main--prev',
         },
-        on: {
-            init: function () {
-                // $all = this.slides.length
-                // $index = this.activeIndex
-                // $numbers = $('.insurance-navigation').find('p')
-                // $activenumb = $numbers.find('.active').text($index + 1)
-                // $allnumb = $numbers.find('.all').text($all)
-            },
-            slideChange: function () {
-                // $index = this.activeIndex
-                // $numbers = $('.insurance-navigation').find('p')
-                // $activenumb = $numbers.find('.active').text($index + 1);
-                
-                // $prevIndex = this.previousIndex;
-                // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
-                //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
-                // });
-            },
-        }
-
     });
-
-// const sliderProductThumbs = new Swiper('.product-slider__thumbs', {
-//         speed: 800,
-//         slidesPerView: 4,
-//         spaceBetween: 35,
-//         // fadeEffect: { crossFade: true },
-//         // effect: 'fade',
-//         // centeredSlides: true,
-//         slideToClickedSlide: true,
-//         // loop: true,
-//         // navigation: {
-//         //     nextEl: '.product--next',
-//         //     prevEl: '.product--prev',
-//         // },
-//         on: {
-//             init: function () {
-//                 // $all = this.slides.length
-//                 // $index = this.activeIndex
-//                 // $numbers = $('.insurance-navigation').find('p')
-//                 // $activenumb = $numbers.find('.active').text($index + 1)
-//                 // $allnumb = $numbers.find('.all').text($all)
-//             },
-//             slideChange: function () {
-//                 // $index = this.activeIndex
-//                 // $numbers = $('.insurance-navigation').find('p')
-//                 // $activenumb = $numbers.find('.active').text($index + 1);
-                
-//                 // $prevIndex = this.previousIndex;
-//                 // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
-//                 //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
-//                 // });
-//             },
-//         }
-
-//     });
-
-// const sliderProduct = new Swiper('.product-slider', {
-//         speed: 800,
-//         slidesPerView: 1,
-//         spaceBetween: 35,
-//         // fadeEffect: { crossFade: true },
-//         // effect: 'fade',
-//         // loop: true,
-//         thumbs: {
-//             // inverse: true,
-//             swiper: sliderProductThumbs
-//           },
-//         navigation: {
-//             nextEl: '.product--next',
-//             prevEl: '.product--prev',
-//         },
-//         on: {
-//             init: function () {
-//                 // $all = this.slides.length
-//                 // $index = this.activeIndex
-//                 // $numbers = $('.insurance-navigation').find('p')
-//                 // $activenumb = $numbers.find('.active').text($index + 1)
-//                 // $allnumb = $numbers.find('.all').text($all)
-//             },
-//             slideChange: function () {
-//                 // $index = this.activeIndex
-//                 // $numbers = $('.insurance-navigation').find('p')
-//                 // $activenumb = $numbers.find('.active').text($index + 1);
-                
-//                 // $prevIndex = this.previousIndex;
-//                 // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
-//                 //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
-//                 // });
-//             },
-//         }
-
-//     });
-
-
-
-// const sliderRelated = new Swiper('.related-slider', {
-//         speed: 800,
-//         slidesPerView: 3,
-//         spaceBetween: 40,
-//         // fadeEffect: { crossFade: true },
-//         // effect: 'fade',
-//         // centeredSlides: true,
-//         // loop: true,
-//         navigation: {
-//             nextEl: '.related--next',
-//             prevEl: '.related--prev',
-//         },
-//         on: {
-//             init: function () {
-//                 // $all = this.slides.length
-//                 // $index = this.activeIndex
-//                 // $numbers = $('.insurance-navigation').find('p')
-//                 // $activenumb = $numbers.find('.active').text($index + 1)
-//                 // $allnumb = $numbers.find('.all').text($all)
-//             },
-//             slideChange: function () {
-//                 // $index = this.activeIndex
-//                 // $numbers = $('.insurance-navigation').find('p')
-//                 // $activenumb = $numbers.find('.active').text($index + 1);
-                
-//                 // $prevIndex = this.previousIndex;
-//                 // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
-//                 //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
-//                 // });
-//             },
-//         }
-
-//     });
-
-// const sliderRelatedNews = new Swiper('.newsrelated-slider', {
-//         speed: 800,
-//         slidesPerView: 4,
-//         spaceBetween: 50,
-//         // fadeEffect: { crossFade: true },
-//         // effect: 'fade',
-//         // centeredSlides: true,
-//         // loop: true,
-//         navigation: {
-//             nextEl: '.newsrelated--next',
-//             prevEl: '.newsrelated--prev',
-//         },
-//         on: {
-//             init: function () {
-//                 // $all = this.slides.length
-//                 // $index = this.activeIndex
-//                 // $numbers = $('.insurance-navigation').find('p')
-//                 // $activenumb = $numbers.find('.active').text($index + 1)
-//                 // $allnumb = $numbers.find('.all').text($all)
-//             },
-//             slideChange: function () {
-//                 // $index = this.activeIndex
-//                 // $numbers = $('.insurance-navigation').find('p')
-//                 // $activenumb = $numbers.find('.active').text($index + 1);
-                
-//                 // $prevIndex = this.previousIndex;
-//                 // $('.insurance-content').find('.insurance-content__text').eq($prevIndex).fadeOut('fast', function() {
-//                 //     $('.insurance-content').find('.insurance-content__text').eq($index).fadeIn('fast')
-//                 // });
-//             },
-//         }
-
-//     });
-
-// sliderProduct.controller.control = sliderProductThumbs;
-// sliderProductThumbs.controller.control = sliderProduct;
 
 
 
@@ -360,8 +187,19 @@ $('body').on('click', '.fancybtn', function(event) {
 
     $("body").on("click",".scroll-btn", function (event) {
         event.preventDefault(); //опустошим стандартную обработку
+
+        if (isMobile == true) {
+            topScroll = 65
+        } else {
+            topScroll = 95
+        }
+
         var id  = new URL($(this).attr('href')).hash,
-            top = $(id).offset().top - 95;
+            top = $(id).offset().top - topScroll;
+
+
+        $('.link--toggle').removeClass('open');
+        $('.mobile').removeClass('open');
         $('body,html').animate({scrollTop: top}, 1000);
     });
 
@@ -417,6 +255,13 @@ $('body').on('click', '.fancybtn', function(event) {
         $('body').find('.consultation-content__tabs .tab[data-tab='+$oldTabIndex+']').fadeOut(400, function() {
             $('body').find('.consultation-content__tabs .tab[data-tab='+$newTabIndex+']').fadeIn(400)
         });
+    });
+
+
+    $('.link--toggle').click(function(e){
+        e.preventDefault()
+        $(this).toggleClass('open');
+        $('.mobile').toggleClass('open');
     });
 
 });
